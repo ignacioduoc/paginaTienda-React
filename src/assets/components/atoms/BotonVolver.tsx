@@ -5,7 +5,7 @@ function BotonVolver(){
 
     return(
         <Link to={`/productos`}
-            className= "btn btn-secundary"
+            className= "btn btn-primary"
         >
             Volver
         </Link>

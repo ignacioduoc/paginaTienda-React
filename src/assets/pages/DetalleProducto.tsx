@@ -55,13 +55,15 @@ function DetalleProducto(){
             <img
                 src = {producto?.imagen} alt={producto?.titulo} style ={{ width: '300px'}} />
             
-            <h2>{producto?.titulo}</h2>
+                <h2>{producto?.titulo}</h2>
 
-            <p>{producto?.descripcion}</p>
+                <p>{producto?.descripcion}</p>
 
-            <p>${producto?.precio}</p>
+                <p>${producto?.precio}</p>
 
-            <BotonVolver/>
+            <div>
+                <BotonVolver/>
+            </div>
         </div>
 
         
