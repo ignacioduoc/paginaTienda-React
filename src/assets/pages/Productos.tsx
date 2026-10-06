@@ -1,0 +1,39 @@
+import CardProducto from "../components/molecules/CardProducto"
+
+function Productos(){
+    return(
+        <div className="container mt-4">
+            <h1>Productos</h1>
+            <div className="d-flex gap-3">
+
+                <CardProducto
+                titulo="Notebook"
+                descripcion="Notebook ideal para estudiar y trabajar"
+                precio={599999}
+                imagen="/img/notebook.jpg"
+                />
+                <CardProducto
+                titulo="Mouse"
+                descripcion="Mouse inalambrico"
+                precio={19999}
+                imagen="/img/mouse.jpg"
+                />
+                <CardProducto
+                titulo="Teclado"
+                descripcion="Teclado Mecanico"
+                precio={39999}
+                imagen="/img/teclado.jpg"
+                />
+                <CardProducto
+                titulo="Volante"
+                descripcion="Volante para jugar"
+                precio={1999999}
+                imagen="/img/Volante-Logitec.jpg"
+                />
+
+            </div>
+        </div>
+    )
+}
+
+export default Productos
