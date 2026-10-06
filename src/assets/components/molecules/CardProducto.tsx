@@ -3,6 +3,7 @@ import Boton from "../atoms/Boton";
 //creamos el props e indicamos los cargos a recibir
 
 interface CardProps{
+    id: number;
     titulo: string;
     descripcion: string;
     precio: number;
@@ -10,7 +11,7 @@ interface CardProps{
 }
 
 
-function CardProducto({titulo,descripcion,precio,imagen}: CardProps) {
+function CardProducto({id,titulo,descripcion,precio,imagen}: CardProps) {
     return (
         <div className="card" style={{width: '20rem'}}>
             <img 
@@ -23,9 +24,9 @@ function CardProducto({titulo,descripcion,precio,imagen}: CardProps) {
                 <p className="card-text">{descripcion}</p>
 
                 <p className="card-text">${precio}</p>
-
+                
                 <div  className= "mt-auto">
-                <Boton/>
+                <Boton id={id}/>
                 </div>
                 
             </div>

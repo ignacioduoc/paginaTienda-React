@@ -4,6 +4,7 @@ import Productos from './assets/pages/Productos'
 import Inicio from './assets/pages/Inicio'
 import Navbar from './assets/components/organisms/Navbar'
 import Contactanos from './assets/pages/Contactanos'
+import DetalleProducto from './assets/pages/DetalleProducto'
 
 function App() {
 
@@ -20,6 +21,8 @@ function App() {
           <Route path="/Contactanos" element={<Contactanos/>}/>
 
           <Route path="/Nosotros" element={<Contactanos/>}/>
+
+          <Route path="/producto/:id" element={<DetalleProducto/>}/>
 
         </Routes>
     </>
