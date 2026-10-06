@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom"
+import BotonVolver from "../components/atoms/BotonVolver"
 
 const productos = [
     {
@@ -28,6 +29,13 @@ const productos = [
         descripcion: "Volante para jugar",
         precio: 1999999,
         imagen: "/img/Volante-Logitec.jpg"
+    },
+    {
+        id:5,
+        titulo :"Audifonos",
+        descripcion: "Audifonos aisladores de sonido",
+        precio: 39999,
+        imagen: "/img/audifonos.jpg"
     }
 
 ]
@@ -53,8 +61,10 @@ function DetalleProducto(){
 
             <p>${producto?.precio}</p>
 
-
+            <BotonVolver/>
         </div>
+
+        
     )
 }
 

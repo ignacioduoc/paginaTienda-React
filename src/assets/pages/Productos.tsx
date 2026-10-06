@@ -34,7 +34,13 @@ function Productos(){
                 precio={1999999}
                 imagen="/img/Volante-Logitec.jpg"
                 />
-
+                <CardProducto
+                id={5}
+                titulo= "Audifonos"
+                descripcion= "Audifonos aisladores de sonido"
+                precio= {39999}
+                imagen="/img/audifonos.jpg"
+                />
             </div>
         </div>
     )
