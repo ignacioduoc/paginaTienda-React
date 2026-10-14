@@ -1,10 +1,28 @@
-function Contactanos(){
-
+import FormularioContacto from "../components/organisms/FormularioContacto"
+function Contactos(){
     return(
-        <div>
-            <h1> Contactanos</h1>
-        </div>
-    )
-}
+        <div className="container mt-4">
 
-export default Contactanos
+            <div className="row justify-content-center">
+
+                <div className="col-12 col-md-6">
+
+                    <div className="card shadow-sm p-3 mb-5 bg-body rounded">
+
+                        <h2 className="mb-4">Formlario de contacto</h2>
+
+                        <FormularioContacto/>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+    );
+}
+export default Contactos;

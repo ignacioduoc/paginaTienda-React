@@ -27,6 +27,10 @@ function Navbar(){
                         Nosotros
                     </Link>
 
+                    <Link className="nav-link text-white" to="/login">
+                        Iniciar sesión
+                    </Link>
+
                 </div>
             </div>
         </nav>
