@@ -13,6 +13,8 @@ function FormularioContacto (){
     const manejarEnvio = async (e: SubmitEvent<HTMLFormElement>) =>{
         e.preventDefault();//Evita recarga de pagina
 
+        if (enviado) return;
+
         if(nombre.trim() === ""){
             alert("Debe ingresar su nombre");
             return;
@@ -30,8 +32,43 @@ function FormularioContacto (){
             alert("Debe ingresar un mensaje");
             return;
         }
-        alert("gracias por contactanor te llamaremos ");
-    }
+        //comienza el envio
+
+        setEnviando(true);
+
+        try{
+            const respuesta = await fetch(
+                "http://localhost:8082/api/contactos",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type" : "application/json",
+                    },
+                    body: JSON.stringify({
+                        nombreCompleto: nombre.trim(),
+                        correo: correo.trim(),
+                        mensaje : mensaje.trim(),
+                    }),
+                }
+            );
+
+            if(!respuesta.ok){
+                throw new Error(`Error HTTP ${respuesta.status}`);
+            }
+
+            alert("Mensaje guardado correctamente");
+
+
+            setNombre("");
+            setCorreo("");
+            setMensaje("");
+        }catch(error){
+            console.error("Error el enviar el contacto:", error);
+            alert("No se pudo enviar el mensaje. intente nuevamente.");
+        }finally{
+            setEnviando(false);
+        }
+    };
 
     return(
         <form onSubmit={manejarEnvio} noValidate>
