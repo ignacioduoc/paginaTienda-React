@@ -98,7 +98,13 @@ function FormularioContacto (){
             alCambiar={setMensaje}
             />
 
-            <button type="submit" className="btn btn-primary"> Enviar Mensaje </button>
+            <button 
+            type="submit" 
+            className="btn btn-primary"
+            disabled={enviado}
+            > 
+            {enviado ? "Enviando..." : "Enviar mensaje"}
+            </button>
 
         </form>
     );
