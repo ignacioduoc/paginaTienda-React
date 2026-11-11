@@ -7,6 +7,7 @@ import Contactanos from './assets/pages/Contactanos'
 //import DetalleProducto from './assets/pages/DetalleProducto'
 import Nosotros from './assets/pages/Nosotros'
 import Login from './assets/pages/Login'
+import ListadoContactos from './assets/pages/ListadoContacos'
 
 function App() {
 
@@ -25,6 +26,8 @@ function App() {
           <Route path="/Nosotros" element={<Nosotros/>}/>
 
           <Route path="/login" element={<Login/>}/>
+
+          <Route path="/ListadoContacto" element={<ListadoContactos/>}/>
 
         </Routes>
     </>
