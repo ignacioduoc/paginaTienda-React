@@ -31,7 +31,7 @@ function Navbar(){
                         Iniciar sesión
                     </Link>
 
-                    <Link className="nav-link text-while" to="/ListarContactos">
+                    <Link className="nav-link text-white" to="/ListadoContactos">
                         Mensajes
                     </Link>
 

@@ -7,7 +7,7 @@ import Contactanos from './assets/pages/Contactanos'
 //import DetalleProducto from './assets/pages/DetalleProducto'
 import Nosotros from './assets/pages/Nosotros'
 import Login from './assets/pages/Login'
-import ListadoContactos from './assets/pages/ListadoContacos'
+import ListadoContactos from './assets/pages/ListadoContactos'
 
 function App() {
 
@@ -27,7 +27,7 @@ function App() {
 
           <Route path="/login" element={<Login/>}/>
 
-          <Route path="/ListadoContacto" element={<ListadoContactos/>}/>
+          <Route path="/ListadoContactos" element={<ListadoContactos/>}/>
 
         </Routes>
     </>
