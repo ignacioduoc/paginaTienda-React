@@ -1,14 +1,16 @@
 
 import { useState } from "react";
 import CampoFormulario from "../molecules/CampoFormulario";
-
+import type { SubmitEvent } from "react";
 
 function FormularioContacto (){
     const[nombre, setNombre] = useState("");
     const[correo, setCorreo] = useState("");
     const[mensaje, setMensaje] = useState("");
 
-    const manejarEnvio = (e: React.SubmitEvent<HTMLFormElement>) =>{
+    const [enviado, setEnviando] = useState(false);
+
+    const manejarEnvio = async (e: SubmitEvent<HTMLFormElement>) =>{
         e.preventDefault();//Evita recarga de pagina
 
         if(nombre.trim() === ""){
